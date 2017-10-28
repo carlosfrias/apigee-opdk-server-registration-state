@@ -14,6 +14,5 @@
 
 - name: Server self report
   debug:
-    msg: "{{ hostvars[inventory_hostname][registered] }}"
-  when: self_report_nam
+    msg: "{{ hostvars[inventory_hostname]['registered'] }}"
 
