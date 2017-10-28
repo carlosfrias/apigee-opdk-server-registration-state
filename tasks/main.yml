@@ -8,12 +8,12 @@
     password: '{{ opdk_user_pass }}'
     mgmt_server_ip: '{{ local_mgmt_ip }}'
 
-- name: Construct self report variable name
-  set_fact:
-    self_report_name: 'edge_{{ server_type }}_self'
+#- name: Construct self report variable name
+#  set_fact:
+#    self_report_name: 'edge_{{ server_type }}_self'
 
 - name: Server self report
   debug:
-    msg: "{{ hostvars[inventory_hostname][self_report_name] }}"
+    msg: "{{ hostvars[inventory_hostname][registered] }}"
   when: self_report_nam
 
