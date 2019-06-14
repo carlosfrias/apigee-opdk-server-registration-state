@@ -12,7 +12,7 @@
 #  set_fact:
 #    self_report_name: 'edge_{{ server_type }}_self'
 
-- name: Server self report
+- name: Server Registration State Report
   debug:
-    msg: "{{ hostvars[inventory_hostname]['registered'] }}"
+    msg: "State of Server Registration: {{ hostvars[inventory_hostname]['registered'] }}"
 
